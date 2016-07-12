@@ -1,0 +1,101 @@
+We will not look at the TELERAY network any longer; we will instead consider a simpli-fied territory
+(about the same size as France, but much simpler in geometry), try to list the threats, and try to come up with a solution:
+where should the sensors be ?
+
+1. Basic data
+The basic data are:
+Domain : a square of 750 km x 750 km, that is 562 500 km2 (continental France has an
+area of 550 000 km2). The coordinates will be from 1 to 750 on the x axis, from 1 to 750
+on the y axis. Each square kilometer will be considered as a "pixel".
+
+We have 20 nuclear plants, the coordinates of which are:
+
+X coord 295 490 694 11 662 473 668 422 361 409
+Y coord 655 704 699 15 329 433 480 177 262 442
+X coord 92 633 60 345 265 294 508 281 438 505
+Y coord 565 34 195 452 651 196 129 461 737 53
+
+2. The threats
+
+  1. Each nuclear plant is considered as a possible danger, so we have to put one sensor
+  in the same pixel. This is just a precaution, because the nuclear plants are
+  closely monitored, permanently, by EDF, the French electricity.
+
+  2. The second threat is as follows: we worry about a possible "cloud of radioactivity",
+  coming from the East, because there might be some nuclear accident in a country
+  situated East of France. So we want to put a certain number of sensors on our
+  Eastern boarder (which represents 750 pixels).
+
+  3. Finally, we have a "diffuse" threat, saying that there might be a terrorist attack
+  anywhere on our territory: a kind of "dirty bomb", which releases radionuclides in
+  the environment, but is not a nuclear bomb. This kind of bomb causes very little
+  damage, but people overreact to such a threat.
+  
+3. Probabilities and costs of accidents
+For a nuclear plant, the probability of a radioactive leak in the atmosphere is estimated
+at 5 5 10  per year, for each plant. All plants may reasonably considered as independent.
+The estimated cost of an accident is 9 10 Euros.
+
+The probability of an accident in some Eastern country, which would affect our eastern
+border is estimated at 4 10 per year. We do not know where the accident would happen
+and what point of our border would be affected. The estimated cost is 5 10 Euros.
+
+The probability of a terrorist action, concerning any particular pixel is 5 10 per year, for
+the whole country, to be converted to any pixel. The estimated cost is 6 10 Euros.
+Of course, all probabilities and costs are rough estimates.
+
+Information about radioactive clouds
+
+We will admit that a radioactive cloud takes the shape of a disk ; the influence of the
+winds on this shape is neglected. If the cloud originates from a nuclear plant or from a
+terrorist attack (threats 1 and 3), it starts with a very small disk, which expands ; in the
+case of a cloud coming from the East (threat 2), the size of the cloud when it enters
+France is unknown. In all cases, the speed and direction of winds (therefore the speed
+and direction of movement for the cloud) are unknown.
+
+4. Information about sensors
+
+We have 400 sensors to be installed; they can be installed in any particular pixel. Each
+sensor detects only locally: it detects the cloud only if the cloud touches the sensor.
+
+Each sensor acts with a 0 or 1 rule: either it says nothing, or it says "1", which means
+"alert". Each sensor works continuously, but, in order to simplify matters, we will admit
+that it sends its signal each hour.
+
+The probability that a given sensor does not work at all is 6 10 per year, for each sensor ;
+all sensors are assumed to be independent, and independent of the accidents. Since the
+accidents have themselves a very low probability, we see that the probability that a sensor
+misses something which really exists is extremely low, to be neglected in practice.
+
+A false alarm occurs when a sensor sends "1" when there is nothing: we admit that this
+is the case on average twice a year, for each sensor.
+
+5. Benefits
+
+Of course, a sensor network does not prevent an accident, but it can diminish its consequences,
+since the populations receive an alert.
+
+We admit the following :
+– For a nuclear accident in a plant, if the sensor works correctly, the benefit might be
+to save one half of the estimated cost, that is 9 0.510 Euros.
+– For an accident detected on the East border, the benefit might be one tenth of the
+estimated cost, that is 4 10 Euros.
+– For a terrorist attack at any point, since it would allow the evacuation from this
+point, the benefit might be two thirds of the estimated cost, that is 6 0.6610 Euros.
+
+6. Costs of the network
+
+First, there is a constant maintenance cost, evaluated to 3 510 Euros per year and per
+sensor.
+
+Next, there is "false alarm cost" : if a sensor gives an alert which does not correspond to
+any reality, the cost is estimated to 5 10 Euros (corresponding to the mobilisation of resources,
+such as police and specific services, psychological impact upon population, technicians'
+visits to replace the sensor, and so on).
+
+One should distinguish carefully between malfunction and false alarm :
+  - If a sensor is isolated and gives an alert, this alert is always taken seriously, so it
+    may lead to a false alarm ;
+  - On the other hand, if a sensor is close enough to another sensor, and if both give different
+    indications, the authorities will be suspicious and check before giving the
+    alert. The cost of a false alarm which has been detected soon enough is only 3 10 Euros.

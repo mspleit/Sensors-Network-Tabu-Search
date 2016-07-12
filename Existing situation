@@ -1,0 +1,10 @@
+It deals with a network of stations, which monitor the radioactivity in the air, and send an alert if this radioactivity 
+is above a certain threshold. This network has existed in France since 1991 ; its name is TELERAY, and it is operated by
+the French Institut de Radioprotection et de Sûreté Nucléaire (IRSN).
+
+See http://www.irsn.fr/FR/connaissances/Environnement/Pages/Home.aspx (in French).
+
+Similar networks exist in Germany and in other countries.
+As one sees, the existing network obeys a simple logic: 
+the old stations were concentrated near the nuclear plants; the new ones are put in each French "département" 
+(an admi-nistrative division), near the main city of this "département" (France, mainland, is divi-ded into 96 "départements").

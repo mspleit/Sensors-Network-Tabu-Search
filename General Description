@@ -1,0 +1,29 @@
+Everyone, nowadays, has heard about "surveillance networks" : they usually consist of a set of sensors, which are
+supposed to detect a danger and send an alert. For instance, there are detection stations in regions exposed to
+fire hazards (see our 2012-2013 Game : Fighting Fires in Siberia). Also, stations may detect a pollution in the air,
+in the water, and so on, and send a signal. Another typical example is the one of sensors detecting dangerous gases
+in coal mines.
+
+In 2007, a disaster occured in Zasyadko, Donetsk region, and more than 100 miners were killed by a methane explosion.
+It was thought that the network of sensors did not work correctly. SCM was consulted by the local authorities: could
+we improve the safety of the network ? Our answer was that each sensor must be monitored permanently, using a comparison
+with its neighbors. So one has to design a very dense network of sensors. And when this is done, double it, and when
+this is done, double it again. This is a vital piece of equipment, and when people are 1,000 meters below the surface,
+there is no room for mathematical optimisation.
+
+In general, to each detection station is associated a "region", which is the set "seen" by the station. This region is
+often a circle (or more exactly a disk), if the station sees equal-ly in all directions (this is the case for fire detections).
+In other circumstances, it may be modified, for instance if one takes the winds into account (air pollution). In a river,
+each station will cover a segment, upstream of the station.
+
+No matter what the shape of the region is, people usually consider that the fewer sta-tions, the better, because these stations
+are costly to buy, to install, to verify, and if we have fewer measurements, it will be easier to treat them. So, the question
+of the covering of the territory by the stations usually reduces to a minimal covering problem. If each region is a disk, we
+would determine the smallest number of disks covering the territory.
+
+What the present Game shows is that this approach is completely wrong if one does not take into account (as one should !)
+the possibility of false alarms. False alarms do exist in real life settings, and they are always neglected in the definition 
+of a network of sensors. So the result is not correct in general.
+
+One should take into account, also, the possibility of failure of each equipment. But, in the case which will occupy us here,
+the failure has a very small probability.
